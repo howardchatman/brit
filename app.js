@@ -1,45 +1,18 @@
-// Confetti
-(function spawnConfetti() {
-  const container = document.getElementById('confetti');
-  const colors = ['#c9a84c', '#f0d080', '#ffffff', '#a07820', '#ffe066', '#e8d5a3'];
-  const count = 60;
+const rsvpForm = document.getElementById('rsvp-form');
+const formMessage = document.getElementById('form-message');
 
-  for (let i = 0; i < count; i++) {
-    const el = document.createElement('div');
-    el.className = 'confetti-piece';
+if (rsvpForm && formMessage) {
+  rsvpForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-    const size = Math.random() * 8 + 4;
-    el.style.cssText = `
-      left: ${Math.random() * 100}%;
-      width: ${size}px;
-      height: ${size * (Math.random() > 0.5 ? 1 : 2.5)}px;
-      background: ${colors[Math.floor(Math.random() * colors.length)]};
-      animation-duration: ${Math.random() * 8 + 6}s;
-      animation-delay: ${Math.random() * 10}s;
-      border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
-    `;
-    container.appendChild(el);
-  }
-})();
+    const formData = new FormData(rsvpForm);
+    const name = String(formData.get('name') || '').trim();
+    const attending = formData.get('attending');
 
-// RSVP form
-function handleRSVP(e) {
-  e.preventDefault();
-  const form = e.target;
-  const confirmation = document.getElementById('rsvp-confirmation');
+    formMessage.textContent = attending === 'yes'
+      ? `Court is in session, ${name || 'counselor'}! Your RSVP has been noted.`
+      : `Thank you, ${name || 'friend'}. Brittany appreciates the love.`;
 
-  const name = form.name.value.trim();
-  const attending = form.attending.value;
-
-  if (attending === 'yes') {
-    confirmation.querySelector('p').textContent =
-      `🎊 We can't wait to celebrate with you, ${name}!`;
-  } else {
-    confirmation.querySelector('p').textContent =
-      `💛 We'll miss you, ${name}! Brittany appreciates the love.`;
-  }
-
-  form.style.display = 'none';
-  confirmation.hidden = false;
-  confirmation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    rsvpForm.reset();
+  });
 }
