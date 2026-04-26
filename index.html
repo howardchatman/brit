@@ -6,7 +6,7 @@
   <title>Brit's Law | Court Is In Session</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Great+Vibes&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -24,7 +24,8 @@
 
   <main id="top">
     <section class="hero-section">
-      <div class="stage-card" aria-hidden="true">
+      <div class="stage-card">
+        <img class="venue-backdrop" src="assets/soho-venue-1.jpg" alt="Soho Garden Houston event crowd under pink and purple lights" />
         <div class="curtain"></div>
         <div class="column column-left"></div>
         <div class="column column-right"></div>
@@ -44,11 +45,13 @@
       </div>
 
       <div class="hero-copy">
-        <p class="eyebrow">Luxury Graduation Celebration</p>
+        <p class="eyebrow">Law School Graduation Celebration</p>
         <h2>Brit's Law Court Is In Session</h2>
+        <p class="hero-meta">Houston &bull; May 9 &bull; Soho Garden</p>
         <p>
-          A private blush-pink, hot-pink, ivory, and black celebration honoring
-          Brittany's law school graduation with dinner, drinks, music, and courtroom-level glamour.
+          An intimate, invitation-only evening honoring Brittany's graduation from
+          Thurgood Marshall School of Law. Blush tones, sharp tailoring, late-night music,
+          and a room curated for the kind of entrance worth remembering.
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#rsvp">Submit RSVP</a>
@@ -57,7 +60,7 @@
       </div>
     </section>
 
-    <section class="section panel event-details" aria-label="Event details">
+    <section class="section event-details" aria-label="Event details">
       <div>
         <span>Date</span>
         <strong>Saturday, May 9th</strong>
@@ -76,10 +79,10 @@
       </div>
     </section>
 
-    <section class="section split" id="itinerary">
+    <section class="section split editorial-section" id="itinerary">
       <div class="section-heading">
         <p class="eyebrow">Order Of Events</p>
-        <h2>Itinerary Timeline</h2>
+        <h2>The Evening Docket</h2>
       </div>
       <ol class="timeline">
         <li>
@@ -113,37 +116,56 @@
       </ol>
     </section>
 
-    <section class="section" id="gallery">
+    <section class="section gallery-section" id="gallery">
       <div class="section-heading">
         <p class="eyebrow">Captured Evidence</p>
-        <h2>Photo Gallery</h2>
+        <h2>Gallery Notes</h2>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-tile"><span>Graduate Portrait</span></div>
-        <div class="gallery-tile"><span>Venue Moment</span></div>
-        <div class="gallery-tile"><span>Guest Table</span></div>
-        <div class="gallery-tile"><span>Celebration Shot</span></div>
+        <figure class="gallery-tile">
+          <img src="assets/soho-venue-1.jpg" alt="Crowded Soho Garden Houston bar and lounge with purple lighting" />
+          <figcaption>Garden Crowd</figcaption>
+        </figure>
+        <figure class="gallery-tile">
+          <img src="assets/soho-venue-2.jpg" alt="Bartender pouring a cocktail through a strainer at Soho Garden" />
+          <figcaption>Signature Pour</figcaption>
+        </figure>
+        <figure class="gallery-tile">
+          <img src="assets/soho-venue-3.jpg" alt="Outdoor Soho Garden Houston patio filled with guests and floral decor" />
+          <figcaption>Patio Scene</figcaption>
+        </figure>
+        <figure class="gallery-tile">
+          <img src="assets/soho-venue-4.jpg" alt="Pink Soho Garden neon sign reflected in glass" />
+          <figcaption>Neon Moment</figcaption>
+        </figure>
+        <figure class="gallery-tile">
+          <img src="assets/soho-venue-5.jpg" alt="Guests gathered in front of a glowing Soho Garden flower wall" />
+          <figcaption>Flower Wall</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section split" id="gifts">
+    <section class="section split registry-section" id="gifts">
       <div class="section-heading">
         <p class="eyebrow">No Gifts Required</p>
-        <h2>Donation Welcome</h2>
+        <h2>Registry Of Grace</h2>
       </div>
-      <div class="panel copy-panel">
+      <div class="copy-panel">
         <p>
           Your presence is the gift. For guests who would like to contribute, donations are welcome
           to The Metallic Sunflower Foundation Inc.
         </p>
         <a class="button button-primary" href="#rsvp">Confirm Attendance</a>
       </div>
+      <figure class="section-photo gift-photo">
+        <img src="assets/soho-venue-2.jpg" alt="Close-up of a cocktail being prepared at Soho Garden" />
+      </figure>
     </section>
 
-    <section class="section" id="vendors">
+    <section class="section credits-section" id="vendors">
       <div class="section-heading">
         <p class="eyebrow">Event Partners</p>
-        <h2>Vendor Section</h2>
+        <h2>Event Credits</h2>
       </div>
       <div class="vendor-grid">
         <article>
@@ -159,17 +181,27 @@
           <h3>Music & Live Moments</h3>
         </article>
       </div>
+      <figure class="credits-photo">
+        <img src="assets/soho-venue-4.jpg" alt="Soho Garden neon signage at night" />
+      </figure>
     </section>
 
-    <section class="section split" id="location">
+    <section class="section split location-section" id="location">
       <div class="section-heading">
         <p class="eyebrow">Location</p>
         <h2>Soho Garden Houston</h2>
       </div>
-      <div class="panel location-card">
+      <div class="location-card">
         <p>408 Main St, Houston, TX 77002</p>
+        <iframe
+          class="map-frame"
+          title="Map to Soho Garden Houston"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=408%20Main%20St%2C%20Houston%2C%20TX%2077002&output=embed">
+        </iframe>
         <div class="location-actions">
-          <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=408%20Main%20St%2C%20Houston%2C%20TX%2077002" target="_blank" rel="noreferrer">Open Google Maps</a>
+          <a class="button button-primary" href="https://www.google.com/maps/dir/?api=1&destination=408%20Main%20St%2C%20Houston%2C%20TX%2077002" target="_blank" rel="noreferrer">Get Directions</a>
           <a class="button button-secondary" href="https://maps.apple.com/?q=408%20Main%20St%2C%20Houston%2C%20TX%2077002" target="_blank" rel="noreferrer">Open Apple Maps</a>
         </div>
       </div>
@@ -178,7 +210,7 @@
     <section class="section rsvp-section" id="rsvp">
       <div class="section-heading">
         <p class="eyebrow">Court Docket</p>
-        <h2>RSVP</h2>
+        <h2>Request The Guest List</h2>
       </div>
       <form class="rsvp-form panel" id="rsvp-form">
         <label>
