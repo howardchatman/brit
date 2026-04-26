@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brittany's Birthday & Law School Graduation Celebration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating confetti -->
+  <div class="confetti-container" id="confetti"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="scales-icon">⚖️</div>
+      <p class="pre-title">You are cordially invited to celebrate</p>
+      <h1>Brittany</h1>
+      <p class="subtitle">Birthday &amp; Law School Graduation</p>
+      <div class="divider">
+        <span>✦</span><span>✦</span><span>✦</span>
+      </div>
+      <p class="tagline">She studied hard, she passed the bar (almost!) —<br />now let's celebrate <em>her</em>!</p>
+    </section>
+
+    <!-- Details card -->
+    <section class="details-card">
+      <div class="detail-block">
+        <span class="detail-icon">📅</span>
+        <h3>Date</h3>
+        <p>Saturday, May 17, 2025</p>
+      </div>
+      <div class="detail-block">
+        <span class="detail-icon">🕖</span>
+        <h3>Time</h3>
+        <p>6:30 PM – 11:00 PM</p>
+      </div>
+      <div class="detail-block">
+        <span class="detail-icon">📍</span>
+        <h3>Location</h3>
+        <p>The Grand Venue<br />123 Celebration Ave<br />Atlanta, GA 30301</p>
+      </div>
+    </section>
+
+    <!-- Dress code -->
+    <section class="dress-code">
+      <h2>Dress Code</h2>
+      <p>Black &amp; Gold — Glamour is encouraged. Come dressed to match the honoree's shine.</p>
+    </section>
+
+    <!-- About the honoree -->
+    <section class="honoree">
+      <h2>About the Honoree</h2>
+      <p>
+        After years of long nights, case briefs, and moot court battles, Brittany has conquered
+        law school. She's brilliant, determined, and unstoppable — and tonight we celebrate
+        every single sacrifice that brought her here.
+      </p>
+      <p class="quote">"The law is reason, free from passion." — Aristotle</p>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp" id="rsvp">
+      <h2>RSVP</h2>
+      <p>Kindly respond by <strong>May 10, 2025</strong></p>
+      <form class="rsvp-form" onsubmit="handleRSVP(event)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <select name="attending" required>
+          <option value="" disabled selected>Will you attend?</option>
+          <option value="yes">Joyfully Accepts</option>
+          <option value="no">Regretfully Declines</option>
+        </select>
+        <input type="number" name="guests" min="1" max="4" placeholder="Number of Guests (max 4)" />
+        <textarea name="message" placeholder="Message for Brittany (optional)" rows="3"></textarea>
+        <button type="submit">Send RSVP 🎉</button>
+      </form>
+      <div class="rsvp-confirmation" id="rsvp-confirmation" hidden>
+        <p>🎊 Thank you! We can't wait to celebrate with you!</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Hosted with love in honor of Brittany</p>
+      <p class="small">Counselor-at-Law in the Making · Birthday Queen Forever</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
